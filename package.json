@@ -1,0 +1,57 @@
+{
+  "name": "dsh-plugin-session-delete",
+  "version": "0.1.0",
+  "description": "Delete DeepSeek Harness sessions from the sidebar with a five-second restore window.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinvoke/dsh-plugin-session-delete.git"
+  },
+  "homepage": "https://github.com/yinvoke/dsh-plugin-session-delete#readme",
+  "bugs": {
+    "url": "https://github.com/yinvoke/dsh-plugin-session-delete/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "undo"
+  ],
+  "type": "module",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.1-rc.3"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib/**/*.js",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "node test/smoke.mjs && node test/client.mjs",
+    "check": "node --check lib/index.js && node --check lib/client.js",
+    "pack:release": "npm pack --pack-destination dist"
+  }
+}

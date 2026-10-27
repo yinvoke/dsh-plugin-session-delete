@@ -1,0 +1,10 @@
+# Submission template. Copy to data/plugins/yinvoke__dsh-plugin-session-delete.yml
+# in awesome-dsh-plugin only after the public repository is at least one day old
+# and the release tarball below has been uploaded and verified.
+url: https://github.com/yinvoke/dsh-plugin-session-delete
+name: yinvoke/dsh-plugin-session-delete
+category: session
+description:
+  en: "Adds session deletion with a five-second restore window to the DSH Web GUI."
+  zh: "为 DSH Web GUI 增加会话删除与五秒恢复窗口。"
+tarball: https://github.com/yinvoke/dsh-plugin-session-delete/releases/latest/download/dsh-plugin-session-delete.tgz

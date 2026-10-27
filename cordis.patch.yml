@@ -1,0 +1,10 @@
+# dsh-plugin-session-delete bundle patch: inserts the dual-face plugin row into
+# the web profile roster. The node half (exports ".") runs in the host process
+# and owns the /session-delete purge route; the `dsh.client` declaration in
+# package.json makes the browser half (exports "./client", served at
+# /plugins/dsh-plugin-session-delete/client.js) load in the web GUI.
+#
+# Activated as a profile bundle layer (the `dsh.bundle.patch` manifest field).
+- insert:
+    - id: session-delete
+      name: "dsh-plugin-session-delete"
