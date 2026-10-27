@@ -1,10 +1,24 @@
 # dsh-plugin-session-delete
 
-[English](README.md) · [MIT 许可证](LICENSE)
+[English](README.en.md) · [MIT 许可证](LICENSE)
 
 为 DeepSeek Harness（DSH）Web GUI 的会话行菜单增加 **删除会话**，包含确认弹窗及 **5 秒恢复窗口**。
 
 **0.1.0 为实验版本。** 这是独立插件，不修改 DSH 内置的归档功能。**恢复期限结束后会永久删除日志，请先备份重要对话。**
+
+## 截图
+
+会话行「⋯」菜单里的 **删除会话**：
+
+![会话菜单中的删除会话](assets/menu.webp)
+
+确认弹窗，标题与会话名分开展示；勾选确认前删除按钮为禁用态：
+
+![删除会话确认弹窗](assets/dialog.webp)
+
+删除后右下角的恢复提示，5 秒内可撤销：
+
+![右下角五秒恢复提示](assets/restore.webp)
 
 ## 功能
 
@@ -28,7 +42,7 @@
 https://github.com/yinvoke/dsh-plugin-session-delete/releases/latest/download/dsh-plugin-session-delete.tgz
 ```
 
-该链接仅在 GitHub Release 已上传同名资产后可用。也可以先克隆仓库，再在插件安装界面选择本地克隆目录：
+也可以先克隆仓库，再在插件安装界面选择本地克隆目录：
 
 ```sh
 git clone https://github.com/yinvoke/dsh-plugin-session-delete.git

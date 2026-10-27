@@ -16,7 +16,7 @@ This is a release checklist, not a record of completed network actions. The inte
 - Ensure the package manifest uses `MIT`, points its repository field to this repository, and declares `dsh.bundle.patch` as `./cordis.patch.yml`.
 - Preserve the browser declaration and the host/client entry exports. `lib/` is readable executable JavaScript; no transpilation or build is required.
 - Keep private profiles, credentials, personal paths and actual session data out of the repository and release.
-- Review [README](../README.md), [中文说明](../README.zh.md), [LICENSE](../LICENSE) and [CHANGELOG](../CHANGELOG.md) for agreement with the code.
+- Review [中文 README](../README.md), [English README](../README.en.md), [LICENSE](../LICENSE) and [CHANGELOG](../CHANGELOG.md) for agreement with the code.
 - Do not run `npm publish` as part of this plan. npm publication is optional and needs its own decision.
 
 ## 2. Validate locally
