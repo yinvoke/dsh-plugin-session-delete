@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Node 24 checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      # lib/ is the readable, directly executable source. No build/install hooks.
+      - name: Check JavaScript syntax
+        run: |
+          node --check lib/index.js
+          node --check lib/client.js
+      - name: Run temporary-storage and simulated-client tests
+        run: npm test
+      - name: Inspect release package contents
+        run: npm pack --dry-run --ignore-scripts
