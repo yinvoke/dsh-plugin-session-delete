@@ -2,6 +2,13 @@
 
 This is a release checklist, not a record of completed network actions. The intended public repository is **https://github.com/yinvoke/dsh-plugin-session-delete** and the license is MIT. Do not claim a release, listing or full runtime verification until it has actually happened.
 
+## Current publication status
+
+- Public repository and `v0.1.0` Release are available; the release asset download was verified.
+- CI is provided as `docs/ci-workflow.yml`, not enabled on GitHub: the current OAuth token lacks `workflow` scope. To enable it, copy the template to `.github/workflows/ci.yml` and push using a credential with workflow permissions, or create it in GitHub's web editor.
+- The repository was created at 2026-10-27 09:31:48 UTC. Submit the awesome-list PR no earlier than 2026-10-28 09:31:48 UTC (17:31:48 Asia/Singapore).
+- Existing catalog entries already cover session deletion/trash. Explain actual differences without claiming uniqueness; acceptance remains the maintainers' decision.
+
 ## 1. Prepare the repository
 
 - Confirm the repository is public and owned by `yinvoke`.
